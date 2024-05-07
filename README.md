@@ -1,6 +1,7 @@
 # NumNest
 https://ricardodurans.github.io/NumNest/WEB/index.html
-Este proyecto consiste en una página web interactiva diseñada para desplegar información sobre el progreso de los estudiantes en un juego educativo llamado "Viaje Intermatemático". El juego tiene como objetivo principal enseñar y reforzar conceptos matemáticos básicos en niños de entre 5 y 12 años.
+
+Este proyecto consiste en una página web interactiva diseñada para desplegar información sobre el progreso de los estudiantes en un juego educativo llamado "NumNest". El juego tiene como objetivo principal enseñar y reforzar conceptos matemáticos básicos en niños de entre 5 y 12 años.
 
 ## Características Principales
 - Integración con Unity: El juego "Viaje Intermatemático", desarrollado en Unity, permite a los niños aprender matemáticas de manera interactiva y divertida.
