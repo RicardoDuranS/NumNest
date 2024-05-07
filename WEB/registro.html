@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NumNest-Registro</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="loginStyles.css" />
+
+    <!-- Incluye CryptoJS para la encriptación -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  </head>
+  <body
+    class="img js-fullheight"
+    style="background-image: url(images/fondo.jpg)"
+  >
+    <a href="index.html" class="back-button">Volver al inicio</a>
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center mb-5">
+            <h2 class="heading-section">Registro a NumNest</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <div class="login-wrap p-0">
+              <h3 class="mb-4 text-center">Ingresa tus datos</h3>
+              <form id="registroForm" action="#" class="signin-form">
+                <div class="form-group">
+                  <input
+                    id="usuario"
+                    type="text"
+                    class="form-control"
+                    placeholder="Nombre de usuario"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    id="contrasena"
+                    type="password"
+                    class="form-control"
+                    placeholder="Contraseña"
+                    required
+                    pattern=".{8,}"
+                    title="La contraseña debe tener al menos 8 caracteres"
+                  />
+                </div>
+                <div class="form-group">
+                  <select id="grupo" class="form-control" required></select>
+                </div>
+                <div class="form-group">
+                  <!-- Aquí se reemplaza el input de texto por un select para el género -->
+                  <select id="genero" class="form-control" required>
+                    <option value="">Selecciona tu género</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <input
+                    id="listNum"
+                    type="text"
+                    class="form-control"
+                    placeholder="Numero de lista"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <button
+                    type="submit"
+                    class="form-control btn btn-primary submit px-3"
+                  >
+                    Registrarse
+                  </button>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="form-control btn btn-primary cancelar px-3"
+                    onclick="cancelarFormulario()"
+                  >
+                    Cancelar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"
+      integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="registro.js"></script>
+  </body>
+</html>

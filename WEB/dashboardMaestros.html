@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualización de datos con ChartJS</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stast.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <div class="caja"> 
+          <nav class="fh5co-main-nav">
+            <ul style="background-color: a6a6a6;">
+              <li class="fh5co-active"><a href="index.html"><span>Inicio</span></a></li>
+              <li class="fh5co-active"><a href="login.html"><span>Iniciar Sesión</span></a></li>
+  
+            </ul>
+          </nav>
+          <img class="escudo" src="images/Escudo.png" alt="">
+        </div>
+        
+        
+      </header>
+      <h1>NumNest</h1>
+      <p>Visualización Maestro</p>
+
+      <hr />
+
+      <section class="cols-2">
+        <figure>
+          <h2>Avance Global</h2>
+          <canvas id="modelsChart"></canvas>
+        </figure>
+
+        <figure>
+          <h2>Comparativa de avance por género:</h2>
+          <canvas class="second-canvas canvas" id="featuresChart"></canvas>
+        </figure>
+
+        <figure class="last-figure">
+          <h2>Cantidad de estudiantes</h2>
+          <canvas id="studentsChart"></canvas>
+
+          <h2>Cantidad de jugadores activos</h2>
+          <canvas id="activePlayersChart"></canvas>
+        </figure>
+      </section>
+
+      <section class="cols-2">
+        <figure>
+          <table id="dataTable" class="styled-table">
+            <thead>
+              <tr>
+                <th class="first-col">Maestro ID</th>
+                <th>Grupo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Los datos se insertarán aquí -->
+            </tbody>
+          </table>
+        </figure>
+
+        <figure>
+          <h2>Lista de Grupos</h2>
+          <table id="gruposTable" class="styled-table">
+            <thead>
+              <tr>
+                <th>Grupo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Los datos se insertarán aquí -->
+            </tbody>
+          </table>
+        </figure>
+      </section>
+
+      <section>
+        <figure>
+          <h2>Lista de Estudiantes</h2>
+          <table id="estudiantesTable" class="styled-table">
+            <thead>
+              <tr>
+                <th>Estudiante ID</th>
+                <th>Número de lista</th>
+                <th>Grupo</th>
+                <th>Progreso</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Los datos se insertarán aquí -->
+            </tbody>
+          </table>
+        </figure>
+      </section>
+
+      <section>
+        <figure>
+          <h2>Lista de Puntajes</h2>
+          <div>
+            <label for="filtroSelect"
+              >Selecciona un criterio de filtrado:</label
+            >
+            <select id="filtroSelect">
+              <option value="estudiante_id">Por ID del Estudiante</option>
+              <option value="nivel_id">Por Nivel ID</option>
+              <option value="top_5">Por Top 5 Mejores</option>
+              <option value="nothing">Sin Filtro</option>
+              <!-- Puedes agregar más opciones aquí -->
+            </select>
+            <input
+              type="text"
+              id="valorFiltroInput"
+              placeholder="Ingresa el valor del filtro"
+            />
+            <button id="aplicarFiltroBtn">Aplicar Filtro</button>
+          </div>
+          <!-- Asegúrate de que tu tabla en HTML tenga un <tbody> explícito -->
+          <table id="puntajesTable" class="styled-table">
+            <thead>
+              <tr>
+                <th>Estudiante ID</th>
+                <th>Nivel ID</th>
+                <th>Fecha</th>
+                <th>Puntaje</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Los datos se insertarán aquí -->
+            </tbody>
+          </table>
+        </figure>
+      </section>
+    </main>
+
+    <footer id="fh5co-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Sobre Nosotros</h3>
+            <p>Somos una plataforma enfocada hacia el aprendizaje de manera dinámica.</p>
+          </div>
+  
+          <div class="col-md-3 col-md-push-1">
+            <h3>Participantes</h3>
+            <ul>
+              <li>Arely</a></li>
+              <li>Pablo</a></li>
+              <li>Dana</li>
+              <li>Nikki</li>
+              
+            </ul>
+          </div>
+  
+          <div class="col-md-3 col-md-push-1">
+            <h3>Escuela Metropolitana</h3>
+            <img src="images/Escudo.png" alt="Escuela Metropolitana">	
+          </div>
+          
+  
+        </div>
+        <div class="row">
+          <div class="col-md-12 fh5co-copyright text-center">
+            <p style="text-align: center; margin-left: 500px;"><small>&copy; 2024 NumNest </small> </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+
+    <script src="dashboardMaestros.js"></script>
+  </body>
+</html>

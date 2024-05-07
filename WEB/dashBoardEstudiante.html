@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualización de datos con ChartJS</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stast.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <div class="caja"> 
+          <nav class="fh5co-main-nav">
+            <ul style="background-color: a6a6a6;">
+              <li class="fh5co-active"><a href="index.html"><span>Inicio</span></a></li>
+              <li class="fh5co-active"><a href="login.html"><span>Iniciar Sesión</span></a></li>
+  
+            </ul>
+          </nav>
+          <img class="escudo" src="images/Escudo.png" alt="">
+        </div>
+        
+        
+      </header>
+      <h1>NumNest</h1>
+      <p>Visualización alumno</p>
+      <hr />
+      <figure>
+        <table id="dataEstudianteTable" class="styled-table">
+          <thead>
+            <tr>
+              <th>Estudiante ID</th>
+              <th>Grupo</th>
+              <th>Numero de lista</th>
+              <th>Progreso</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Los datos se insertarán aquí -->
+          </tbody>
+        </table>
+      </figure>
+
+      <figure>
+        <table id="puntajeTable" class="styled-table">
+          <thead>
+            <tr>
+              <th>Estudiante ID</th>
+              <th>Fecha</th>
+              <th>Nivel ID</th>
+              <th>Valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Los datos se insertarán aquí -->
+          </tbody>
+        </table>
+      </figure>
+    </main>
+
+    <footer id="fh5co-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Sobre Nosotros</h3>
+            <p>Somos una plataforma enfocada hacia el aprendizaje de manera dinámica.</p>
+          </div>
+  
+          <div class="col-md-3 col-md-push-1">
+            <h3>Participantes</h3>
+            <ul>
+              <li>Arely</a></li>
+              <li>Pablo</a></li>
+              <li>Dana</li>
+              <li>Nikki</li>
+              
+            </ul>
+          </div>
+  
+          <div class="col-md-3 col-md-push-1">
+            <h3>Escuela Metropolitana</h3>
+            <img src="images/Escudo.png" alt="Escuela Metropolitana">	
+          </div>
+          
+  
+        </div>
+        <div class="row">
+          <div class="col-md-12 fh5co-copyright text-center">
+            <p style="text-align: center; margin-left: 500px;"><small>&copy; 2024 NumNest </small> </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+
+    <script src="dashboardEstudiante.js"></script>
+  </body>
+</html>
