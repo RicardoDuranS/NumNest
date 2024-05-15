@@ -1,32 +1,43 @@
 # NumNest
 https://ricardodurans.github.io/NumNest/WEB/index.html
 
-Este proyecto consiste en una página web interactiva diseñada para desplegar información sobre el progreso de los estudiantes en un juego educativo llamado "NumNest". El juego tiene como objetivo principal enseñar y reforzar conceptos matemáticos básicos en niños de entre 5 y 12 años.
+NumNest es un proyecto educativo diseñado para enseñar matemáticas básicas a niños de 5 a 12 años de edad de una manera interactiva y divertida. El proyecto consta de tres partes principales: un videojuego desarrollado en Unity, una página web interactiva y una API Flask que actúa como intermediario entre el videojuego y la página web, gestionando la base de datos y proporcionando funcionalidades clave.
 
-## Características Principales
-- Integración con Unity: El juego "Viaje Intermatemático", desarrollado en Unity, permite a los niños aprender matemáticas de manera interactiva y divertida.
-- Base de Datos SQLite: Utiliza una base de datos SQLite para almacenar información sobre los usuarios (estudiantes y maestros), sus puntajes y su progreso en el juego.
-- API Flask: Una API Flask alojada en PythonAnywhere se encarga de interactuar con la base de datos y proporcionar los datos necesarios para la página web.
-- Despliegue de Información: La página web despliega los puntajes y el progreso de los estudiantes, permitiendo a los maestros y a los propios estudiantes realizar un seguimiento de su rendimiento en el juego.
+## Funcionamiento del Proyecto
 
-## API Flask para Viaje Intermatemático
-La API Flask desarrollada en Python es una parte fundamental del proyecto Viaje Intermatemático. Alojada en PythonAnywhere, esta API se encarga de gestionar una variedad de funciones para la página web, incluyendo autenticación de usuarios, obtención y actualización de información en la base de datos, y comunicación entre el juego de Unity y la página web.
+### Videojuego en Unity 
+- El videojuego, denominado "Viaje Intermatemático", tiene como objetivo principal enseñar conceptos matemáticos básicos, así como figuras, volumen, áreas y perímetros. Utiliza una interfaz interactiva y amigable para involucrar a los niños en el aprendizaje.
+- Conecta con una API Flask para validar usuarios y actualizar los puntajes de los usuarios a medida que avanzan en el juego, proporcionando así una retroalimentación instantánea sobre su progreso.
 
-### Funcionalidades Principales
-1. Autenticación de Usuarios
-La API Flask maneja la autenticación de usuarios, validando las credenciales proporcionadas por los estudiantes y maestros al iniciar sesión en la página web. Utiliza métodos de encriptación para garantizar la seguridad de la información de inicio de sesión.
+### Pagina Web
+- La página web realiza operaciones CRUD (Crear, Leer, Actualizar, Eliminar) en una base de datos a través de una API Flask, brindando a los usuarios una plataforma accesible para interactuar con el juego y su información.
+ 
+- Permite a los usuarios descargar el juego de manera gratuita, facilitando su acceso y distribución.
+  
+- Para maestros, despliega información detallada sobre varios estudiantes, incluyendo datos estadísticos útiles para medir el progreso de los alumnos, como el tiempo dedicado al juego y los temas con los que tienen más dificultades. Además, proporciona la capacidad de modificar la información de los estudiantes para adaptarse a sus necesidades específicas.
 
-2. Manipulación de Datos en la Base de Datos
-Mediante métodos HTTP POST y GET, la API interactúa con la base de datos SQLite para realizar diversas operaciones, como:
+- Para alumnos, ofrece estadísticas personalizadas sobre su propio progreso en el juego, lo que les permite identificar áreas de mejora y establecer metas educativas concretas.
 
-    - Obtener puntajes y progreso de los estudiantes.
-    - Actualizar puntajes y progreso de los estudiantes después de cada juego.
-    - Registrar nuevos usuarios en la base de datos.
-   
-3. Arquitectura DAO
-La API Flask está diseñada siguiendo la arquitectura de Acceso a Datos (DAO), lo que permite separar la lógica de negocio de la lógica de acceso a datos. Para lograr esto, se utiliza una clase ConnectionFactory para crear conexiones a la base de datos, y luego se implementan clases DAO (Data Access Object) para interactuar con la base de datos de manera modular y organizada. Estas clases DAO son invocadas por clases Controller, lo que facilita la separación de preocupaciones y la escalabilidad del código.
+### API Flask
+- Actúa como intermediario entre el videojuego y la página web, gestionando todas las operaciones de la base de datos de manera eficiente y segura.
 
-4. Comunicación con la Página Web y el Juego Unity
-La API Flask se encarga de proporcionar los datos necesarios a la página web y al juego Unity, permitiendo una experiencia de usuario integrada y coherente. A través de solicitudes HTTP, la API envía información de puntajes y progreso a la página web, y recibe actualizaciones de puntajes del juego Unity para su registro en la base de datos.
+- Utiliza un modelo DAO (Data Access Object) para separar las responsabilidades y hacer el código más modular y mantenible, lo que facilita la escalabilidad y la incorporación de nuevas funcionalidades en el futuro.
+  
+- Proporciona funcionalidades de autenticación de usuarios, validación de puntajes y gestión de información tanto para el videojuego como para la página web, garantizando una experiencia de usuario fluida y coherente en todas las plataformas.
 
-Con la API Flask correctamente implementada, el proyecto Viaje Intermatemático puede ofrecer una experiencia educativa interactiva y efectiva para estudiantes y maestros, facilitando el aprendizaje y el seguimiento del progreso en matemáticas de una manera divertida y estimulante.
+## Aprendizajes Relevantes
+El desarrollo de NumNest ha proporcionado una serie de aprendizajes significativos en diversas áreas:
+
+- Integración de Tecnologías: Aprender a integrar diferentes tecnologías, como Unity, Flask y SQLite, para construir una solución completa y funcional que aborde las necesidades educativas específicas del proyecto.
+
+- Arquitectura DAO: Utilizar una arquitectura DAO ha demostrado ser una estrategia efectiva para separar las responsabilidades y mejorar la modularidad del código, lo que facilita su mantenimiento y extensión en el tiempo.
+
+- API Development: Desarrollar una API Flask ha sido fundamental para facilitar la comunicación entre el videojuego, la página web y la base de datos, permitiendo una experiencia de usuario integrada y coherente que mejora la usabilidad y la eficacia del proyecto en su conjunto.
+
+Este proyecto representa un esfuerzo colaborativo para crear una herramienta educativa innovadora que haga que el aprendizaje de las matemáticas sea más accesible y atractivo para los niños. La combinación de tecnologías y metodologías utilizadas ha permitido desarrollar una solución robusta, escalable y centrada en el usuario que tiene el potencial de impactar positivamente en la educación de los niños en todo el mundo.
+
+
+
+
+
+
